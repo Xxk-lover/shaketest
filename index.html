@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>打卡任务</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; text-align: center; }
+    #taskArea { margin-top: 50px; }
+    input { padding: 10px; font-size: 16px; width: 80%; }
+    button { padding: 12px 24px; font-size: 16px; margin-top: 20px; }
+    #adOverlay { display: none; position: fixed; top: 0; left: 0;
+                 width: 100%; height: 100%; background: rgba(0,0,0,0.9);
+                 color: white; z-index: 999; text-align: center; padding-top: 30vh; }
+  </style>
+</head>
+<body>
+
+  <div id="taskArea">
+    <h2>请输入被试编号并完成打卡</h2>
+    <input type="text" id="subjectId" placeholder="例如：S001">
+    <br>
+    <button id="startBtn">开始任务（允许传感器）</button>
+    <button id="checkinBtn" style="display:none;">完成打卡</button>
+    <p id="status"></p >
+  </div>
+
+  <div id="adOverlay">
+    <h3>广告</h3>
+    <p>这是一个模拟广告页</p >
+    <button id="backBtn">返回</button>
+    <button id="learnMoreBtn">了解更多</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
